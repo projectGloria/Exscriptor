@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Exscriptor</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <header class="header">
+    <img src="Exscriptor.png" alt="" class="logo" width="28" height="28">
+    <h1>Exscriptor</h1>
+  </header>
+
+  <main class="options">
+    <label class="option">
+      <span class="text">
+        <span class="title">Enabled</span>
+        <span class="hint">Copy the video link on Ctrl+C with nothing selected</span>
+      </span>
+      <input type="checkbox" id="enabled" class="switch">
+    </label>
+
+    <label class="option dependent">
+      <span class="text">
+        <span class="title">Include timestamp</span>
+        <span class="hint">Append the current playback time</span>
+      </span>
+      <input type="checkbox" id="includeTimestamp" class="switch">
+    </label>
+
+    <label class="option dependent">
+      <span class="text">
+        <span class="title">Show toast</span>
+        <span class="hint">Brief “Video link copied” notice</span>
+      </span>
+      <input type="checkbox" id="showToast" class="switch">
+    </label>
+  </main>
+
+  <script src="popup.js"></script>
+</body>
+</html>

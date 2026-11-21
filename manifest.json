@@ -1,0 +1,30 @@
+{
+  "manifest_version": 3,
+  "name": "Exscriptor",
+  "version": "1.0.0",
+  "description": "Press Ctrl+C / Cmd+C with nothing selected to copy the link of the video on the page.",
+  "permissions": ["storage"],
+  "icons": {
+    "16": "Exscriptor.png",
+    "48": "Exscriptor.png",
+    "128": "Exscriptor.png"
+  },
+  "action": {
+    "default_title": "Exscriptor",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "Exscriptor.png",
+      "48": "Exscriptor.png",
+      "128": "Exscriptor.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "all_frames": true,
+      "match_about_blank": true,
+      "run_at": "document_idle"
+    }
+  ]
+}
